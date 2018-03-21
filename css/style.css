@@ -63,6 +63,7 @@ img {
 }
 
 .container {
+	padding-top: 100px;
 	padding: 2px;
 	background: rgba(76, 76, 76, .4);
 	margin: 0 auto;
