@@ -36,7 +36,7 @@ img {
 }
 
 .section {
-	padding: 2px;
+	padding: 10px 2px;
 	min-height: 88vh;
 }
 
@@ -64,7 +64,8 @@ img {
 
 .container {
 	padding-top: 100px;
-	padding: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
 	background: rgba(76, 76, 76, .4);
 	margin: 0 auto;
 	border-radius: 10px;
