@@ -1,0 +1,188 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: black;
+	color: white;
+}
+
+body {
+
+	scroll-behavior: smooth;
+}
+
+header {
+	padding: 5px;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	background: rgba(165, 180, 255, .7);
+}
+
+nav {
+	margin: 0 auto;
+	padding: 10px;
+}
+
+img {
+	width: 100%;
+}
+
+.nav-brand {
+	text-transform: uppercase;
+	font-size: 23px;
+}
+
+.section {
+	padding: 10px;
+	height: 88vh;
+}
+
+.cover {
+	background-image: url(../img/background.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	padding-top: 100px;
+}
+
+.h-title {
+	padding: 10px;
+}
+
+.maker {
+	background-image: url(../img/background2.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 70vh;
+}
+
+.container {
+	padding: 15px;
+	background: rgba(76, 76, 76, .4);
+	margin: 0 auto;
+	border-radius: 10px;
+	font-size: 17px;
+}
+
+.container-title {
+  color: white;
+  margin-top: 10px;
+  padding: 5px;
+  width: 100%;
+}
+
+.t-stock {
+	margin: 30px;
+	border-radius: 10px;
+	padding: 10px;
+	background: rgba(15, 179, 255, .8);
+}
+
+.t-v {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	align-items: center;
+  justify-content: space-around;
+}
+
+.t-h {
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  justify-content: center;
+}
+
+.t-header-main {
+	background: rgba(15, 179, 255, .8);
+	border-radius: 3px;
+}
+
+.t-header {
+	padding: 10px;
+}
+
+.t-content {
+	padding: 10px;
+	min-width: 100px;
+	max-width: 250px;
+}
+
+.t-content-main {
+	color: black;
+	background: rgba(150, 221, 255, .4);
+}
+
+.arrow {
+	width: 50px;
+	margin: 0 auto;
+}
+
+.s-list {
+	width: 80px;
+}
+
+.social {
+	margin-top: 350px;
+	padding: 5px;
+	background-color: rgba(135, 135, 135, .6);
+}
+
+footer {
+	padding: 30px;
+}
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+		font-size: 15px;
+    }
+
+	nav {
+		width: 90%;
+		font-size: 15px;
+	}
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .container {
+        width: 900px;
+    }
+
+	nav {
+		width: 900px;
+	}
+}
+
+.loading-message {
+	padding-top: 150px;
+	min-height: 300px;
+}
+
+.price-increased{
+	background: green;
+	color: white;
+}
+
+.price-decreased{
+	background: red;
+	color: white;
+}
+
+.first-update{
+	background: white;
+	color: black;
+	border: 1px solid black;
+}
