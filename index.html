@@ -1,1 +1,98 @@
-<h1>Test</h1>
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Stock Live</title>
+  <meta name="description" content="A “single page application” (SPA) to display live stock data">
+  <meta name="author" content="Vivek Sudhakar Lingayat">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css?v=1.0">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="nav-brand">
+				Stock Live
+			</div>
+		</nav>
+	</header>
+
+	<section class="section cover" id="stock-app">
+		<div class="container-title">
+			<h1 class="h-title">
+				Live Stock
+			</h1>
+			<p>
+				Live view for stocks.
+			</p>
+		</div>
+		<div class="container">
+
+			<div class="t-stock">
+				<template v-if="stocksLoaded">
+					<div class="t-v t-header-main">
+						<div class="t-header"><strong>Ticker</strong></div>
+						<div class="t-header"><strong>Price</strong></div>
+						<div class="t-header"><strong>Last Update</strong></div>
+					</div>
+					<div v-for="({price, last_update, status}, name) in stocks_dict" class="stock-item">
+						<div class="t-v t-content-main">
+							<div class="t-content">{{name|capitalize}}</div>
+							<div class="t-content" :class="status">{{price|roundoff}}</div>
+							<div class="t-content">{{ getLastUpdateTime(last_update) }}</div>
+						</div>
+					</div>
+				</template>
+				<template v-else>
+					<div class="loading-message">
+						<div class="t-v">
+							<div class="t-content">
+								<div><img src="img/loading.gif" height="80px" width="100px"></div>
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+		<a href="#profile"><div class="arrow"><img src="img/white-arrow-png-41944.png"></div></a>
+	</section>
+	<section class="section maker" id="profile">
+
+		<div class="social container">
+			<h2 class="h-title">Social</h1>
+			<div class="t-v">
+				<a href="https://facebook.com/vvksl">
+					<div class="s-list">
+						<img src="img/facebook.png">
+					</div>
+				</a>
+				<a href="https://github.com/vvkvivekl">
+					<div class="s-list">
+						<img src="img/github.svg">
+					</div>
+				</a>
+				<a href="https://twitter.com/vvksl">
+					<div class="s-list">
+						<img src="img/twitter.png">
+					</div>
+				</a>
+			</div>
+		</div>
+
+	</section>
+	<footer>
+		<p>Designer - Vivek Lingayat</p>
+	</footer>
+	<script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
+
