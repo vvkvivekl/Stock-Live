@@ -17,19 +17,27 @@
 
 <body>
 	<header>
-		<nav>
+		<nav class="view-v">
 			<div class="nav-brand">
 				Stock Live
+			</div>
+			<div class="nav-menu">
+				<a href="https://github.com/vvkvivekl/Stock-Live" target="_blank" class="nav-link">
+					<div class="nav-menu-item github">
+						On GitHub
+					</div>
+				</a>
 			</div>
 		</nav>
 	</header>
 
 	<section class="section cover" id="stock-app">
+
 		<div class="container-title">
 			<h1 class="h-title">
-				Live Stock
+				Demo
 			</h1>
-			<p>
+			<p class="h-title">
 				Live view for stocks.
 			</p>
 		</div>
@@ -43,9 +51,9 @@
 						<div class="t-header"><strong>Last Update</strong></div>
 					</div>
 					<div v-for="({price, last_update, status}, name) in stocks_dict" class="stock-item">
-						<div class="t-v t-content-main">
+						<div class="t-v t-content-main" :class="status">
 							<div class="t-content">{{name|capitalize}}</div>
-							<div class="t-content" :class="status">{{price|roundoff}}</div>
+							<div class="t-content">{{price|roundoff}}</div>
 							<div class="t-content">{{ getLastUpdateTime(last_update) }}</div>
 						</div>
 					</div>
@@ -90,7 +98,6 @@
 				</a>
 			</div>
 		</div>
-
 	</section>
 	<footer>
 		<p>Designer - Vivek Lingayat</p>
@@ -100,4 +107,3 @@
     <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
-
