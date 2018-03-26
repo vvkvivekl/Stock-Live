@@ -6,7 +6,7 @@ var app = new Vue({
   },
   methods: {
     getStockData: function(){
-      var ws = new WebSocket('wss://stocks.mnet.website');
+      var ws = new WebSocket('ws://stocks.mnet.website');
       var vueObj = this;
       ws.onmessage = function (event){
         vueObj.stocksLoaded = true;
